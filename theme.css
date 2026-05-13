@@ -21,26 +21,24 @@
 @define-color item_text @selected_fg_color;
 
 @define-color item_box_selected rgba(64, 130, 109,0.4); 
-@define-color item_text_selected rgba(64, 130, 109, 1); 
+@define-color item_text_selected rgba(200, 200, 200, 1); 
 @define-color item_name_selected rgba(255, 255, 255,1); 
 
-@define-color item_shortcut_color rgba(255, 255, 255, 1); 
+@define-color item_shortcut_color darker(@item_text);
 @define-color item_shortcut_shadow darker(@bg_color);
-@define-color item_shortcut_color_sel rgba(64, 130, 109, 1); 
+@define-color item_shortcut_color_sel darker(@item_text_selected);
 @define-color item_shortcut_shadow_sel darker(@item_box_selected);
 
 .app {
     background-color: @window_bg;
     border: 2px solid @window_border_color;
-    border-radius: 30px;
-    margin: 0 -20px;
+    border-radius: 10px;
     box-shadow: none;
 }
 
 .input {
     color: @input_color;
     padding: 0px;
-    margin-left: 15px;
     border-bottom: 1px solid alpha(@window_border_color,0.3);
 }
 
@@ -67,7 +65,7 @@
 
 .selected.item-box {
     background-color: @item_box_selected;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 .selected.item-box .item-text {
@@ -88,7 +86,7 @@
 }
 
 .result-box {
-    margin: 0px 19px 0px 19px;
+    margin: 0 19px;
 }
 
 .prefs-btn {
